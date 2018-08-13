@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	Investment Calculator
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8;">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./Content/images/psw_icon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Content/styles/tweaks.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<script src="./Content/scripts/amcharts.js"></script>
+	<script src="./Content/scripts/light.js"></script>
+	<script src="./Content/scripts/serial.js"></script>
+	<script src="./Content/scripts/chart.js"></script>
+	
+  </head>
+  <body>
+    <div id="ajaxBusy">
+      <img src="./Content/images/loading.gif">
+      <p>Calculating...</p>
+    </div>
+    <div class="container" role="main">
+      <div class="page-header">
+        <h1>Investment Calculator <small>with Monte Carlo Simulation</small></h1>
+      </div>
+      <form action="#">
+        <div class="input-group">
+          <span class="input-group-addon" id="addon-inital">$</span>
+          <input id="initial" type="number" class="form-control" placeholder="Initial Amount" aria-describedby="addon-initial">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="addon-rate">%</span>
+          <input id="rate" type="number" class="form-control" placeholder="Average Annual Return Rate" aria-describedby="addon-rate">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="addon-rateStdDev">%</span>
+          <input id="rateStdDev" type="number" required class="form-control" placeholder="Standard Deviation of Return Rate" aria-describedby="addon-rateStdDev">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="addon-year">#</span>
+          <input id="year" type="number" min="1" max="50" class="form-control" placeholder="Years to Retirement (1-50)" aria-describedby="addon-year">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="addon-investment">$</span>
+          <input id="investment" type="number" class="form-control" placeholder="Annual Investment Amount" aria-describedby="addon-investment">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="addon-numSimulation">#</span>
+          <input id="numSimulation" type="number" min="10" max="1000" required class="form-control" placeholder="Number of Simulations (1-1000)" aria-describedby="addon-numSimulation">
+        </div>
+        <div class="btn-wrapper">
+          <button type="submit" id="calc" class="btn btn-primary btn-block">Calculate</button>
+        </div>
+      </form>
+      <div id="chartdiv"></div>
+      <form action="#">
+        <div class="input-group hidden">
+          <span class="input-group-addon" id="addon-percBegin">%</span>
+          <input id="percBegin" type="number" class="form-control" placeholder="Beginning Percentile" aria-describedby="addon-percBegin" value="0">
+        </div>
+        <div class="input-group hidden">
+          <span class="input-group-addon" id="addon-percEnd">%</span>
+          <input id="percEnd" type="number" class="form-control" placeholder="Ending Percentile" aria-describedby="addon-percEnd"  value="100">
+        </div>
+      </form>
+    </div>
+    <!--scripts-->
+	<script type="text/javascript" src="./Content/scripts/spreadsheetweb-api-adaptor.js"></script>
+	<script src="./Content/scripts/page.js"></script>
+  </body>
+</html>

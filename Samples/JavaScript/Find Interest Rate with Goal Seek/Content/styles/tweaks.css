@@ -1,0 +1,79 @@
+.ajax-loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -32px;
+}
+
+.ajax-loader image {
+	height: 32px;
+	width: 64px;
+}
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+.shadow {
+  -moz-box-shadow:    3px 3px 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  box-shadow:         3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+h1, h2 {
+    text-align: center;
+	font-size: 1.3em;
+}
+
+label {
+	font-weight: bold !important;
+}
+
+.ui-checkbox .ui-btn, .ui-radio .ui-btn {
+	text-align: center !important;
+}
+
+input {
+	text-align: right !important;
+}
+
+#output {
+	display: none;
+	font-size: xx-large;
+    text-align: center;
+}
+
+span {
+	font-size: 0.7em;
+}
+
+#oRate, #oSteps {
+	color: darkgoldenrod;
+	font-size: 1em;
+    font-weight: bold;
+}
+
+#footer {
+	text-align: center;
+}
+
+.license {
+	font-size: .75em;
+}
+
+@media (min-width:40em) {
+
+}
+
+@media (min-width:50em) {
+	.ui-page {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}

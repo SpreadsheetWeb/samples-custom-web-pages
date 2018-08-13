@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+		Find Interest Rate with Goal Seek
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8;">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://dev5.pagos.com/SpreadsheetWEB/App_Themes/SiteTheme/images/psw_icon.ico">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="./Content/styles/vintage.min.css">
+        <link rel="stylesheet" href="./Content/styles/tweaks.css">
+		<script type="text/javascript" src="./Content/scripts/spreadsheetweb-api-adaptor.js"></script>
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="./Content/scripts/page.js"></script>
+    </head>
+    <body style="padding:0">
+        <div data-role="page" id="page">
+            <!-- main  -->
+            <div id="PSW_Workbook" role="main" class="ui-content">
+                <h1>Find Interest Rate with Goal Seek</h1>
+                <div id="inputs">
+                	<div>
+                		<label for="loanAmount">Loan Amount</label>
+                		<div><input type="number" id="loanAmount" value="100000"></div>
+                	</div>
+                	<div>
+                		<label for="term">Term In Months</label>
+                		<div><input type="number" id="term" value="180"></div>
+                	</div>
+                	<div>
+                		<label for="payment">Payment</label>
+                		<div><input type="number" id="payment" value="900"></div>
+                	</div>
+                	<div><button id="calc">Calculate</button></div>
+                </div><!--inputs-->
+                <div id="output">
+                    <div><span>Solution found!</span></div>
+                	<div>
+                        <span>Your interest rate is </span>
+                        <span id="oRate"></span>
+                    </div>
+                    <div>
+                        <span>Solution is found in </span>
+                        <span id="oSteps"></span>
+                        <span> steps</span>
+                    </div>
+                </div>
+            </div><!--/PSW_Workbook-->
+            <div id="footer" data-role="footer" data-position="fixed" class="headerfooter">
+                <span class="copyright">Powered by <a href="http://www.spreadsheetweb.com">© 2018 SpreadsheetWEB</a></span>
+            </div>
+        </div><!--/page-->
+        <div id="ajaxBusy" class="ajax-loader" style="display: none;">
+            <p>
+                <img src="./Content/images/ajax-loader.gif" alt="loader">
+            </p>
+        </div>
+        <!--scripts-->
+
+    </body>
+</html>

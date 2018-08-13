@@ -1,0 +1,53 @@
+#ajaxBusy {
+	display: none;
+    position: fixed;
+    top: 0px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+#ajaxBusy p {
+	display: inline;
+}
+.input-group span {
+	text-align: left;
+}
+.input-group, .btn-wrapper {
+	margin: 10px;
+}
+.input-group-addon {
+    min-width: 300px;
+}
+div.input-group > span:nth-child(2) {
+    display: none;
+}
+
+input {
+	text-align: right;
+}
+
+#chartdiv {
+	height: 250px;
+	margin: 10px;
+}
+
+@media screen and (max-width: 680px) {
+	small {
+		display: block;
+	}
+}
+	
+	
+@media screen and (max-width: 610px) {
+	div.input-group > span:nth-child(2) {
+		display: table-cell;
+	}
+	div.input-group > span:nth-child(1) {
+		display: none;
+	}
+	.input-group-addon {
+		min-width: 40px;
+	}
+}
